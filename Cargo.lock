@@ -3,5 +3,12 @@
 version = 4
 
 [[package]]
+name = "terminal_tools"
+version = "0.1.0"
+
+[[package]]
 name = "tetris"
 version = "0.1.0"
+dependencies = [
+ "terminal_tools",
+]
