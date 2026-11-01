@@ -1,4 +1,9 @@
-use terminal_tools::canvas::{Pos, Size, Draw, Canvas};
+use terminal_tools::canvas::{Canvas, Draw, Pos, Size};
+
+pub mod tetromino;
+mod border;
+
+pub use border::Border;
 
 #[derive(Debug, Clone, PartialEq, Eq, Default)]
 pub struct Board {
