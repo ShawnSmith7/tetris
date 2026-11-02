@@ -1,4 +1,5 @@
 use terminal_tools::canvas::{Canvas, Draw, Pos, Size};
+use colored::*;
 
 pub mod tetromino;
 mod border;
@@ -22,8 +23,8 @@ impl Draw for Board {
         for &is_block in &self.data {
             if let (Some(c1), Some(c2)) = (chars.next(), chars.next()) {
                 if is_block {
-                    *c1 = '[';
-                    *c2 = ']';
+                    *c1 = "[".normal();
+                    *c2 = "]".normal();
                 }
             }
         }

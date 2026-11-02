@@ -5,6 +5,7 @@ pub use game_manager::GameManager;
 use terminal_tools::canvas::{Canvas, Size, Pos, Draw, TextBox};
 use super::board::{Board, Border};
 use std::fmt::Alignment;
+use colored::*;
 
 use Alignment::*;
 
@@ -22,8 +23,8 @@ impl Game {
         board_border.draw(&mut canvas);
         next_border.draw(&mut canvas);
         
-        TextBox::new(Pos::new(1, 1), 12, Center, "HOLD").draw(&mut canvas);
-        TextBox::new(Pos::new(1, 37), 12, Center, "NEXT").draw(&mut canvas);
+        TextBox::new(Pos::new(1, 1), 12, Center, "HOLD".normal()).draw(&mut canvas);
+        TextBox::new(Pos::new(1, 37), 12, Center, "NEXT".normal()).draw(&mut canvas);
 
         let hold = Board::new(Pos::new(2, 1), Size::new(4, 6));
         let board = Board::new(Pos::new(1, 15), Size::new(20, 10));
